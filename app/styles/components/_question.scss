@@ -1,0 +1,164 @@
+.question {
+  line-height: 1.4;
+  margin-bottom: 30px;
+
+  .title {
+    color: $black;
+    text-transform: capitalize;
+    transition: $transition;
+  }
+
+  .button {
+    color: $black;
+    background-color: $gray;
+    margin: 0 auto 0 10px;
+    transition: $transition;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  /**
+   * Overwrite range-slider 
+   */
+  .range-slider {
+    .rail,
+    .steps,
+    .track {
+      height: 10px;
+      border-radius: 10px;
+    }
+
+    .track {
+      background: $green-lighter;
+      transition: $transition background;
+    }
+
+    .handle {
+      width: 20px;
+      height: 20px;
+      border: none;
+      box-shadow: none;
+      margin-top: -6px;
+      background: $green-base;
+      transition: $transition background;
+
+      .tip {
+        bottom: 25px;
+        box-shadow: none;
+        background: none;
+        font-weight: bold;
+        color: $gray-darker;
+        font-size: $font-size-medium;
+        transform: translateX(-50%) scale(1);
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    max-height: 44px;
+    transition: $transition;
+
+    p {
+      opacity: 0;
+      visibility: hidden;
+      transition-delay: 0.5ms;
+      transition: $transition;
+    }
+
+    .grid {
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  &__slider {
+    margin: 30px 0 20px;
+  }
+
+  &__intensity {
+    font-weight: bold;
+    color: $green-base;
+  }
+
+  /**
+   * Open animation
+   */
+  &--open {
+    .title {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .question__title {
+      max-height: 60px;
+
+      p {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.question--severity {
+      .button {
+        transform: translateX(-240px);
+      }
+    }
+
+    &.question--ownership {
+      .button {
+        transform: translateX(-281px);
+      }
+    }
+
+    &.question--support {
+      .button {
+        transform: translateX(-240px);
+      }
+    }
+  }
+
+  /**
+   * Color modifiers
+   */
+  &--medium {
+    .range-slider {
+      .track {
+        background-color: $lime-lighter;
+      }
+      .handle {
+        background-color: $lime-darker;
+      }
+    }
+    .question__intensity {
+      color: $lime-base;
+    }
+  }
+
+  &--maximum {
+    .range-slider {
+      .track {
+        background-color: $orange-lighter;
+      }
+      .handle {
+        background-color: $orange-darker;
+      }
+    }
+    .question__intensity {
+      color: $orange-base;
+    }
+  }
+}

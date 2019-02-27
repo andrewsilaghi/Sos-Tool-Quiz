@@ -1,0 +1,24 @@
+.quiz {
+  .title {
+    color: $green-base;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .button {
+    margin: 10px auto 40px;
+  }
+
+  &__tutorial {
+    line-height: 1.4;
+    margin: 40px 0;
+    padding: 0 20px;
+
+    iframe {
+      display: block;
+      margin-right: 20px;
+      border: 1px solid $green-base;
+      padding: 3px;
+    }
+  }
+}

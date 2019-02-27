@@ -1,0 +1,34 @@
+{
+  "name": "sos",
+  "version": "0.1.0",
+  "description": "SOS questionnaire",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --config .eslintrc --fix 'app/lib'",
+    "development": "./node_modules/.bin/parcel app/index.html",
+    "build": "./node_modules/.bin/parcel build app/index.html",
+    "deploy": "rm -rf dist && npm run build && surge"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "node-sass": "^4.9.3",
+    "parcel": "^1.9.7",
+    "prettier": "^1.14.2",
+    "tslib": "^1.9.3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "dateformat": "^3.0.3",
+    "preact": "^8.3.0",
+    "preact-range-slider": "^0.2.0"
+  }
+}

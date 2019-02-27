@@ -1,0 +1,64 @@
+.prompt {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: $modal-bg;
+
+  &__content {
+    width: 500px;
+    border: 10px solid $green-base;
+    box-sizing: border-box;
+  }
+
+  &__success {
+    color: $white;
+    background: $green-base;
+    padding: 50px 70px;
+
+    p {
+      text-align: center;
+      line-height: 1.4;
+      margin: 10px 0 20px;
+    }
+
+    .button {
+      margin: 0 auto;
+      color: $green-base;
+      background-color: $white;
+    }
+  }
+
+  &__form {
+    padding: 50px;
+    background-color: $white;
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    div {
+      padding: 0 15px;
+
+      label {
+        padding-left: 20px;
+      }
+    }
+
+    form {
+      margin: 0 0 40px;
+    }
+
+    label {
+      margin: 0 0 7px;
+      font-size: $font-size-base;
+    }
+
+    .button {
+      margin: 0 auto;
+    }
+  }
+}

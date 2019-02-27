@@ -1,0 +1,62 @@
+body {
+  background-color: $body-bg;
+  font-family: $font-family-sans;
+  font-size: $font-size-base;
+  color: $black;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--column {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.button {
+  color: $white;
+  font-weight: bold;
+  background: $green-base;
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  border-radius: 25px;
+  transition: $transition background;
+  display: block;
+
+  &--dense {
+    padding: 5px 10px;
+    font-size: $font-size-small;
+  }
+
+  &:disabled {
+    background: $gray;
+    pointer-events: none;
+  }
+}
+
+.title {
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: center;
+  font-size: $font-size-huge;
+}
+
+::selection {
+  background: $green-base;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $green-base;
+  color: $white;
+}

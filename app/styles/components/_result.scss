@@ -1,0 +1,49 @@
+.result {
+  width: 450px;
+  margin: 0 auto;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .button {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  &__score {
+    color: $green-base;
+    font-size: $font-size-medium;
+    text-transform: initial;
+  }
+
+  &__cards {
+    padding: 0 10px;
+    align-items: initial;
+    margin: 40px 0 30px;
+
+    > * {
+      flex: 1;
+      margin: 0 10px;
+      border: 10px solid $green-base;
+    }
+
+    p {
+      padding: 15px 25px;
+      color: $green-base;
+      font-size: $font-size-medium;
+      line-height: 1.4;
+    }
+
+    em {
+      display: block;
+      background: $green-base;
+      color: $white;
+      text-align: center;
+      font-size: $font-size-medium;
+      font-style: italic;
+      padding: 5px 0 15px;
+      font-weight: bold;
+    }
+  }
+}
